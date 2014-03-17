@@ -3,22 +3,17 @@ library(rCharts)
 
 shinyUI(pageWithSidebar(
   
-  headerPanel("Grand titre"),
+  headerPanel("Exemple OpenFisca"),
   
   sidebarPanel(
     
-    selectInput('varSex',
-                'Choose sex:',
-                levels(as.data.frame(HairEyeColor)$Sex)),
-    selectInput('varCyl',
-                'Choose cyl:',
-                c(4,6,8))
-    
+    selectInput('varLoyer',
+                'Loyer:',
+                c(1000,3000))
   ),
     
   mainPanel(
-    showOutput("plot","nvd3"),
-    plotOutput("ggplot")
+    showOutput("plot","nvd3")
   )
 
 ))
