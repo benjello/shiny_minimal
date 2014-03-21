@@ -13,7 +13,9 @@ shinyUI(pageWithSidebar(
   ),
     
   mainPanel(
-    showOutput("plot","nvd3")
+    showOutput("plot","nvd3"),
+    dataTableOutput("table")
   )
 
+   
 ))

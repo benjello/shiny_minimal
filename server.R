@@ -14,6 +14,8 @@ shinyServer(function(input, output) {
     n$set(dom = 'plot', width = 700,height=380)
     n
   })
+  
+  output$table <-  renderDataTable({output2}) 
 
 #   output$ggplot <- renderPlot({
 #     #p <- qplot(wt, mpg, data = subset(mtcars,cyl==input$varCyl))
